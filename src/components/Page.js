@@ -1,13 +1,18 @@
 import React from 'react'
-import Footer from './Footer'
 import styled from 'styled-components'
+import Footer from './Footer'
+import Nav from './Nav'
+import 'reset-css'
 
 export default ({ children }) => (
   <Container>
-    <nav>nav</nav>
+    <Nav />
     {children}
     <Footer />
   </Container>
 )
 
-const Container = styled.div``
+const Container = styled.div`
+  font-family: Avenir, 'Muli', sans-serif;
+  color: #333;
+`

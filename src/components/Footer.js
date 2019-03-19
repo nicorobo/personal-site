@@ -15,7 +15,7 @@ const Footer = styled.footer`
   padding: 1rem 0 0.3rem 0;
   text-align: center;
   font-size: 0.9rem;
-  font-weight: lighter;
+  font-weight: 200;
   font-style: italic;
 `
 const Heart = styled.span`
