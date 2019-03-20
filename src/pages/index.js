@@ -3,6 +3,6 @@ import Page from '../components/page'
 
 export default () => (
   <Page>
-    <div>Hello world!</div>
+    <div>Home Page</div>
   </Page>
 )

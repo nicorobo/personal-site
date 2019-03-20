@@ -1,41 +1,38 @@
-import React, { Component, PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers'
-import { Link } from 'react-router'
+import React from 'react'
+import styled from 'styled-components'
+import { primaryBrand } from '../colors'
 
-export default class ProjectCard extends Component {
-	render() {
-		const { title, description, projectLink, pageLink, gitLink, icon } = this.props;
-		return (
-			<div className="project-card">
-				<div className="project-card-section-img">
-					<a href={projectLink || pageLink || '#'} target="_blank">
-						{icon}
-					</a>
-				</div>
-				<div className="project-card-section-main">
-					<a className="project-title" href={projectLink || pageLink || '#'} target="_blank">{title}</a>
-					<p className="project-description" dangerouslySetInnerHTML={{ __html: (description || '') }}></p>
-					<div className="project-card-footer">
-						{[
-							(pageLink ? <Link key="article" className="project-card-footer-link" to={prefixLink(pageLink)}>Article</Link> : null),
-							(gitLink ? <a key="git" className="project-card-footer-link" href={gitLink} target="_blank">Github</a> : null)
-							
-						]}
-					</div>
-				</div>
-			</div>
-		)
-	}
-}
+export default ({ title, description, projectLink, gitLink }) => (
+  <ProjectCard>
+    <Title href={projectLink} target="_blank">
+      {title}
+    </Title>
+    <Description dangerouslySetInnerHTML={{ __html: description || '' }} />
+    <GithubLink href={gitLink} target="_blank">
+      Github
+    </GithubLink>
+  </ProjectCard>
+)
 
-ProjectCard.propTypes = {
-	title:PropTypes.string.isRequired,
-	description:PropTypes.string,
-	projectLink:PropTypes.string,
-	pageLink:PropTypes.string,
-	gitLink:PropTypes.string,
-	icon:PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.element
-	])
-}
+const ProjectCard = styled.div`
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  flex-direction: column;
+  margin-bottom: 2rem;
+`
+const Title = styled.a`
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: ${primaryBrand};
+  text-decoration: none;
+`
+const Description = styled.p`
+  line-height: 1.25;
+`
+const GithubLink = styled.a`
+  align-self: flex-end;
+  color: ${primaryBrand};
+  text-decoration: none;
+`

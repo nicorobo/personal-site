@@ -26,8 +26,7 @@ export default () => (
 const Nav = styled.nav`
   display: flex;
   height: 40px;
-  //   border: 1px solid black;
-  margin: 0.6rem;
+  margin-bottom: 1rem;
 `
 const BrandLink = styled(Link)`
   display: flex;
@@ -52,6 +51,7 @@ const Links = styled.div`
 const NavLink = styled(Link)`
   margin-right: 1rem;
   margin-bottom: 0;
+  color: ${primaryBrand};
   font-weight: lighter;
   text-decoration: none;
   &:last-child {

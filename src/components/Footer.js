@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { primaryBrand, primaryText } from '../colors'
 
 export default () => (
   <Footer>
@@ -23,13 +24,13 @@ const Heart = styled.span`
   color: #cb6773;
 `
 const BrandLink = styled(Link)`
-  color: #333;
+  color: ${primaryText};
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
   span {
-    color: #9d50bb;
+    color: ${primaryBrand};
     font-weight: bold;
   }
 `
