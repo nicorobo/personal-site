@@ -1,5 +1,5 @@
 import React from 'react'
-import Page from '../components/page'
+import Page from '../components/Page'
 import styled from 'styled-components'
 import ProjectCard from '../components/ProjectCard'
 import projects from '../projects'
