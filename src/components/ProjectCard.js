@@ -2,24 +2,51 @@ import React from 'react'
 import styled from 'styled-components'
 import { primaryBrand } from '../colors'
 
-export default ({ title, description, projectLink, gitLink }) => (
+export default ({ title, description, projectLink, gitLink, icon, color }) => (
   <ProjectCard>
-    <Title href={projectLink} target="_blank">
-      {title}
-    </Title>
-    <Description dangerouslySetInnerHTML={{ __html: description || '' }} />
-    <GithubLink href={gitLink} target="_blank">
-      Github
-    </GithubLink>
+    <Icon color={color}>{icon}</Icon>
+    <CardBody>
+      <Title href={projectLink} target="_blank">
+        {title}
+      </Title>
+      <Description dangerouslySetInnerHTML={{ __html: description || '' }} />
+      <GithubLink href={gitLink} target="_blank">
+        Github
+      </GithubLink>
+    </CardBody>
   </ProjectCard>
 )
 
 const ProjectCard = styled.div`
   display: flex;
-  width: 90%;
-  max-width: 500px;
+  max-width: 800px;
+  margin: 0 15% 5% 15%;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5% 10% 5%;
+  }
+`
+const CardBody = styled.div`
+  display: flex;
+  padding-left: 1rem;
   flex-direction: column;
-  margin-bottom: 2rem;
+  justify-content: center;
+  @media (max-width: 750px) {
+    align-items: center;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+`
+const Icon = styled.div`
+fill: ${props => console.log(props.color)}
+  display: flex;
+  align-items: center;
+  min-width: 150px;
+  svg {
+    width: 150px;
+    max-height: 150px;
+  }
 `
 const Title = styled.a`
   font-size: 1.3rem;
