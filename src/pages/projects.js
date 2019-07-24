@@ -17,6 +17,14 @@ import {
   IconPlace,
 } from '../components/Icons'
 
+const getColor = (length, i, colorA, colorB, colorC) => {
+  const half = (length - 1) / 2
+  if (i < half) {
+    return mix(i / half, colorB, colorA)
+  }
+  return mix((i - half) / half, colorC, colorB)
+}
+
 export default () => (
   <Page>
     <Title>Projects</Title>
@@ -26,7 +34,13 @@ export default () => (
           <ProjectCard
             key={project.title}
             {...project}
-            color={mix(i / (projects.length - 1), '#56B4D3', primaryBrand)}
+            color={getColor(
+              projects.length,
+              i,
+              '#56B4D3',
+              primaryBrand,
+              '#38BE92'
+            )}
           />
         )
       })}

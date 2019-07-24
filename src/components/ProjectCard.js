@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { darken } from 'polished'
 
 export default ({ title, description, projectLink, gitLink, icon, color }) => (
   <ProjectCard>
@@ -28,7 +29,7 @@ const ProjectCard = styled.div`
 `
 const CardBody = styled.div`
   display: flex;
-  padding-left: 1rem;
+  padding-left: 2rem;
   flex-direction: column;
   justify-content: center;
   @media (max-width: 750px) {
@@ -43,18 +44,21 @@ const Icon = styled.div`
   }
   display: flex;
   align-items: center;
-  min-width: 150px;
+  min-width: 120px;
   svg {
-    width: 150px;
-    max-height: 150px;
+    width: 120px;
+    max-height: 120px;
   }
 `
 const Title = styled.a`
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: ${props => props.color};
   text-decoration: none;
+  color: ${props => props.color};
+  &:hover {
+    color: ${props => darken(0.1, props.color)};
+  }
 `
 const Description = styled.p`
   line-height: 1.25;
