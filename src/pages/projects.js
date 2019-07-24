@@ -2,6 +2,7 @@ import React from 'react'
 import Page from '../components/Page'
 import styled from 'styled-components'
 import { mix } from 'polished'
+import { primaryBrand } from '../colors'
 import ProjectCard from '../components/ProjectCard'
 import {
   IconThoughts,
@@ -9,6 +10,11 @@ import {
   IconLocation,
   IconMendeleev,
   IconDirbook,
+  IconGroovin,
+  IconDaily,
+  IconMidi,
+  IconLuna,
+  IconPlace,
 } from '../components/Icons'
 
 export default () => (
@@ -20,7 +26,7 @@ export default () => (
           <ProjectCard
             key={project.title}
             {...project}
-            color={mix(projects.length / i, 'red', 'blue')}
+            color={mix(i / (projects.length - 1), '#56B4D3', primaryBrand)}
           />
         )
       })}
@@ -47,7 +53,7 @@ const projects = [
     projectLink: 'http://groovin.casa/',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/patterning-clone',
-    icon: <IconElements />,
+    icon: <IconGroovin />,
   },
   {
     title: 'Daily Journal',
@@ -56,7 +62,7 @@ const projects = [
     projectLink: 'https://dailyjournal.me/',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/daily-journal',
-    icon: <IconElements />,
+    icon: <IconDaily />,
   },
   {
     title: '@react-midi',
@@ -65,7 +71,7 @@ const projects = [
     projectLink: 'https://www.npmjs.com/package/@react-midi/hooks',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/react-midi-hooks',
-    icon: <IconElements />,
+    icon: <IconMidi />,
   },
   {
     title: 'Lunaphase',
@@ -74,7 +80,7 @@ const projects = [
     projectLink: 'https://lunaphase.netlify.com/',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/Lunaphase',
-    icon: <IconElements />,
+    icon: <IconLuna />,
   },
   {
     title: 'Place List',
@@ -83,7 +89,7 @@ const projects = [
     projectLink: '',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/placelist',
-    icon: <IconElements />,
+    icon: <IconPlace />,
   },
   {
     title: 'Element Calculator',
