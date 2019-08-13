@@ -2,10 +2,10 @@ import React from 'react'
 export default function IconPlace(props) {
   return (
     <svg viewBox="0 0 419 278" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <g
           transform="translate(0 209)"
-          fill-opacity=".1"
+          fillOpacity=".1"
           className="project-icon-svg"
         >
           <ellipse cx="362.5" cy="16" rx="56.5" ry="16" />
@@ -15,7 +15,7 @@ export default function IconPlace(props) {
         <g className="project-icon-svg" fill="#000">
           <path d="M8.61 137.628A52.616 52.616 0 0 1 3 113.91C3 84.688 26.729 61 56 61s53 23.688 53 52.91c0 8.527-2.02 16.584-5.61 23.718h.127L67.674 217.45a12.782 12.782 0 0 1-6.44 6.43c-6.448 2.885-14.018.006-16.908-6.43L8.483 137.628h.128zM314.61 137.628A52.616 52.616 0 0 1 309 113.91C309 84.688 332.729 61 362 61s53 23.688 53 52.91c0 8.527-2.02 16.584-5.61 23.718h.127l-35.843 79.822a12.782 12.782 0 0 1-6.44 6.43c-6.448 2.885-14.018.006-16.908-6.43l-35.843-79.822h.128zM151.828 93.448c-4.369-8.7-6.828-18.525-6.828-28.924C145 28.888 173.878 0 209.5 0S274 28.888 274 64.524c0 10.4-2.46 20.224-6.828 28.924h.156l-43.621 97.344a15.572 15.572 0 0 1-7.838 7.841c-7.847 3.52-17.059.008-20.576-7.84l-43.62-97.345h.155z" />
         </g>
-        <g transform="translate(28 30)" fill-opacity=".464" fill="#FFF">
+        <g transform="translate(28 30)" fillOpacity=".464" fill="#FFF">
           <circle cx="27.5" cy="83.5" r="27.5" />
           <circle cx="333.5" cy="83.5" r="27.5" />
           <circle cx="180.5" cy="33.5" r="33.5" />

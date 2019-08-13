@@ -65,6 +65,9 @@ const Description = styled.p`
 `
 const GithubLink = styled.a`
   align-self: flex-end;
-  color: ${props => props.color};
   text-decoration: none;
+  color: ${props => props.color};
+  &:hover {
+    color: ${props => darken(0.1, props.color)};
+  }
 `

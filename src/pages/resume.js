@@ -1,347 +1,301 @@
 import React from 'react'
 import styled from 'styled-components'
 import Page from '../components/Page'
+import { primaryBrand } from '../colors'
 
 export default () => (
   <Page>
-    <Resume>
-      <header>
-        <div class="name-section">
-          <h3 class="title">Nick Roberts</h3>
-          <a class="website" href="http://meadowlab.io">
-            meadowlab.io
-          </a>
-          <a class="website vis-small" href="https://github.com/nickroberts404">
-            github.com/nickroberts404
-          </a>
-          <a class="email vis-small" href="mailto:nickroberts404@gmail.com">
-            nickroberts404@gmail.com
-          </a>
-        </div>
-        <div class="spacer" />
-        <div class="personal-info">
-          <a class="email vis-large" href="mailto:nickroberts404@gmail.com">
-            nickroberts404@gmail.com
-          </a>
-          <a class="website vis-large" href="https://github.com/nickroberts404">
-            github.com/nickroberts404
-          </a>
-        </div>
-      </header>
-      <section class="education">
-        <div class="section-header">
-          <div class="section-title">Education</div>
-        </div>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">The University of Texas</div>
-              <div>Austin, TX</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">Graduation: Spring 2016</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <ul>
-              <li>B.S.A in Computer Science</li>
-              <li>
-                Relevant Coursework: Software Engineering, Info Retrieval and
-                Web Search, Data Management
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section class="experience">
-        <div class="section-header">
-          <div class="section-title">Work Experience</div>
-        </div>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">The World's Coffee</div>
-              <div>Austin, TX</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">November 2016 - December 2016</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <div class="job-title">Freelance Software Engineer</div>
-            <ul>
-              <li>Built initial coffee bean storefront in 2 months</li>
-              <li>
-                Used React for the client and admin sites, Express for the API,
-                and Stripe's API for payments
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">Weebly</div>
-              <div>San Francisco, CA</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">June 2015 - August 2015</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <div class="job-title">Software Engineer Intern</div>
-            <ul>
-              <li>
-                Worked on a strong team of 5 engineers building the next
-                iteration of Weebly's drag n' drop website editor
-              </li>
-              <li>
-                Worked with PHP and Backbone.js to make the editor more secure
-                and responsive
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section class="projects">
-        <div class="section-header">
-          <div class="section-title">Projects</div>
-        </div>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">
-                <a target="_blank" href="http://elementcalc.me/">
-                  Element Calculator
-                </a>
-              </div>
-              <div>React, Gulp</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">March 2016</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <ul>
-              <li>
-                An interactive, responsive periodic table that doubles as a
-                molecular mass calculator
-              </li>
-              <li>
-                Uses a homebrewed npm module{' '}
-                <a href="https://github.com/nickroberts404/Mendeleev">
-                  Mendeleev
-                </a>{' '}
-                to handle periodic table data and compound calculations
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">
-                <a target="_blank" href="https://thoughtjar.co/">
-                  Thoughtjar
-                </a>
-              </div>
-              <div>React, Gulp</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">June 2016</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <ul>
-              <li>A tool for organizing thoughts and ideas into categories</li>
-              <li>
-                Uses the localStorage API to persist data and service workers to
-                allow offline use
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="subsection">
-          <div class="section-header">
-            <div class="header-left">
-              <div class="subsection-title">
-                <a target="_blank" href="https://www.npmjs.com/package/dirbook">
-                  Dirbook
-                </a>
-              </div>
-              <div>Javascript</div>
-            </div>
-            <div class="header-right">
-              <div class="subsection-info">December 2017</div>
-            </div>
-          </div>
-          <div class="section-body">
-            <ul>
-              <li>
-                A CLI that indexes directories/projects, enabling users to open
-                and copy them
-              </li>
-              <li>
-                Optionally manages a subsection of user's .bash_profile to add
-                aliases for directories
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section class="subsection">
-        <div class="section-header">
-          <div class="header-left">
-            <div class="subsection-title">
-              <a
-                target="_blank"
-                href="https://github.com/nickroberts404/mirageo"
-              >
-                Mirageo
-              </a>
-            </div>
-            <div>Express, Webpack, Mapbox</div>
-          </div>
-          <div class="header-right">
-            <div class="subsection-info">February 2017</div>
-          </div>
-        </div>
-        <div class="section-body">
-          <ul>
-            <li>
-              A library for creating mock location data, optionally within a
-              bounding box/polygon
-            </li>
-            <li>
-              Sister package{' '}
-              <a href="https://github.com/nickroberts404/mirageo-server">
-                mirageo-server
-              </a>{' '}
-              can serve the data locally and provides a map interface
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="skills">
-        <div class="section-header">
-          <div class="section-title">Technical Skills</div>
-        </div>
-        <div class="subsection">
-          <p>
-            JavaScript, Python, React, Express, Mocha, ES6, MongoDB, D3, Sass,
-            GIS, Git, HTML5/CSS3
-          </p>
-        </div>
-      </section>
+    <Resume className="resume">
+      <Header />
+      <Section title="Education" items={education} />
+      <Section title="Work Experience" items={experience} />
+      <Section title="Projects" items={projects} />
+      <SkillSection />
     </Resume>
+    <ButtonContainer>
+      <a href="/resume.pdf">
+        <PDFButton>
+          Download PDF <i className="fas fa-file" />
+        </PDFButton>
+      </a>
+    </ButtonContainer>
   </Page>
 )
 
+const Header = () => (
+  <div className="header">
+    <div className="left-side">
+      <h2 className="name">Nick Roberts</h2>
+      <a className="website contact" href="https://meadowlab.io">
+        meadowlab.io
+      </a>
+      <a className="website contact" href="https://github.com/nickroberts404">
+        github.com/nickroberts404
+      </a>
+    </div>
+    <div className="right-side">
+      <a className="email contact" href="mailto:nickroberts404@gmail.com">
+        nickroberts404@gmail.com
+      </a>
+      <div className="phone contact">512-788-3156</div>
+      <div className="location contact">Austin, TX</div>
+    </div>
+  </div>
+)
+
+const Section = ({ title, items }) => (
+  <div className="section">
+    <div className="section-title">{title}</div>
+    <div className="section-items">
+      {items.map(i => (
+        <Item key={i.title} item={i} />
+      ))}
+    </div>
+  </div>
+)
+
+const Item = ({ item }) => (
+  <div className="item">
+    <div className="item-header">
+      {item.link ? (
+        <a className="item-title link" href={item.link}>
+          {item.title}
+        </a>
+      ) : (
+        <a className="item-title">{item.title}</a>
+      )}
+
+      <div className="secondary">{item.secondary}</div>
+      <div className="date">{item.date}</div>
+    </div>
+    <div className="subtitle">{item.subtitle}</div>
+    <div className="details">
+      {item.details.map((d, i) => (
+        <div key={i} className="detail">
+          {d}
+        </div>
+      ))}
+    </div>
+  </div>
+)
+
+const SkillSection = () => (
+  <div className="section">
+    <div className="section-title">Technical Skills</div>
+    <div className="details">
+      JavaScript, Python, React, Express, ES6, GraphQL, MongoDB, D3, Sass, GIS,
+      Git, HTML5/CSS3
+    </div>
+  </div>
+)
+
+const ButtonContainer = styled.div`
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+`
+
+const PDFButton = styled.button`
+  padding: 0.5rem 2rem;
+  outline: none;
+  color: ${primaryBrand};
+  border-radius: 5px;
+  border: 1px solid ${primaryBrand};
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: white;
+  i {
+    margin-left: 0.3rem;
+  }
+  &:hover {
+    background: ${primaryBrand};
+    color: white;
+  }
+`
 const Resume = styled.div`
-  margin-top: -1rem;
-  li {
-    margin-bottom: 0;
-  }
-
-  a {
-    color: #444;
-    text-decoration: none;
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  ul {
-    margin-bottom: 2rem;
-    padding-left: 2.5rem;
-  }
-  ul > li {
-    list-style-type: disc;
-    list-style-position: outside;
-  }
-
-  header {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 20px;
+  .header {
     display: flex;
-    margin: 2rem 0 1rem 0;
+    margin-bottom: 1rem;
+    justify-content: space-between;
   }
-
-  .vis-small {
-    display: none;
+  .header a {
+    text-decoration: none;
+    color: #333;
   }
-
-  .name-section {
+  .header a:hover {
+    color: ${primaryBrand};
+  }
+  .contact {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+  }
+  .name {
+    line-height: 1;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+  .header .left-side {
     display: flex;
     flex-direction: column;
   }
-
-  .title {
-    color: $primary-color;
-    margin-bottom: 0;
-    /*font-weight: 600;*/
-  }
-  .website,
-  .email {
-    opacity: 0.8;
-  }
-
-  .personal-info {
-    flex: 1;
+  .header .right-side {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    // display: none;
   }
-
-  .section-header {
+  .section {
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+  .item {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+  }
+  .item-header {
     display: flex;
+    align-items: flex-end;
+  }
+  .item-title {
+    font-weight: 600;
+    margin-right: 0.7rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .item-title.link:hover {
+    color: ${primaryBrand};
+  }
+  .secondary {
+    flex-grow: 1;
+    opacity: 0.9;
+    font-size: 0.9rem;
     font-weight: lighter;
   }
-
-  .header-left {
-    display: flex;
-    flex: 1;
+  .subtitle {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
-
-  .section-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: $primary-color;
+  .date {
+    font-size: 0.9rem;
+    font-style: italic;
   }
-  .section-body {
-    a {
-      font-style: italic;
-    }
+  .details {
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
   }
-
-  .subsection {
-    margin-left: 2rem;
+  .detail:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    top: -2px;
+    right: 7px;
+    background-color: #333;
   }
-
-  .subsection-title {
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-
-  .subsection-info {
-    color: $primary-color;
-    opacity: 0.8;
-    // font-style: italic;
-  }
-
-  .job-title {
-    opacity: 0.8;
-  }
-
-  @media (max-width: 600px) {
-    .section-header {
-      flex-direction: column;
-    }
-    .vis-small {
-      display: block;
-    }
-    .vis-large {
-      display: none;
-    }
+  .detail {
+    margin-bottom: 0.3rem;
   }
 `
+const education = [
+  {
+    title: 'The University of Texas',
+    secondary: 'Austin, TX',
+    date: 'Fall 2012 - Spring 2016',
+    details: [
+      'B.S.A in Computer Science',
+      'Relevant Coursework: Software Engineering, Data Management, Info Retrieval and Web Search',
+    ],
+  },
+]
+
+const experience = [
+  {
+    title: 'StreamMe',
+    secondary: 'Austin, TX',
+    subtitle: 'Front End Engineer',
+    date: 'April 2017 - August 2018',
+    details: [
+      'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform',
+      'Led development of greenfield project "Communities" to build a more inclusive environment for streamers',
+      'Used React and Flux to develop and enhance the UX/UI for an isomorphic web app, focusing on a realtime chat component, helpful style guide, and GDPR compliance',
+    ],
+  },
+  {
+    title: "The World's Coffee",
+    secondary: 'Austin, TX',
+    subtitle: 'Freelance Software Engineer',
+    date: 'November 2016 - January 2017',
+    details: [
+      'Built and deployed early-stage coffee bean storefront in 2 months, including an inventory management system',
+      "Used React and Redux to build out the client and admin sites, Express for the API, and Stripe's API for payments",
+    ],
+  },
+  {
+    title: 'Weebly',
+    secondary: 'San Francisco, CA',
+    subtitle: 'Software Engineer Intern',
+    date: 'June 2015-August 2015',
+    details: [
+      "Worked on the drag n' drop team to build a more secure and responsive website creator using PHP and Backbone.js",
+      'Migrated the editor to an iframe to prevent code injection, focusing personally on inter-window communication',
+    ],
+  },
+]
+
+const projects = [
+  {
+    title: 'PlaceList',
+    secondary: 'Express, GraphQL, React, Google Maps API',
+    date: 'July 2019',
+    details: [
+      'A simple app for creating and sharing "playlists" of places, using Google\'s Places API for location data',
+      'Server authenticates with Facebook credentials and uses Apollo to provide a GraphQL interface for client',
+    ],
+    link: 'https://placelist.casa',
+  },
+  {
+    title: 'Groovin',
+    secondary: 'React, D3',
+    date: 'June 2019',
+    details: [
+      'A circular 8-part drum machine that outputs MIDI note/velocity in addition to playing samples through Web Audio',
+      'Built to test capabilities of @react-midi, can receive as well as send MIDI clock and transport messages',
+    ],
+    link: 'https://groovin.casa',
+  },
+  {
+    title: '@react-midi',
+    secondary: 'React',
+    date: 'April 2019',
+    details: [
+      'A library of hooks and components for working with MIDI in React, used for communicating with music devices',
+      'Encourages a more tactile web experience by making it easy to accept input from knobs, sliders, and buttons',
+    ],
+    link: 'https://www.npmjs.com/package/@react-midi/hooks',
+  },
+  {
+    title: 'Daily Journal',
+    secondary: 'React, Redux, Local Storage',
+    date: 'March 2019',
+    details: [
+      "A journal for keeping short summaries of day's activities used for personal reflection",
+      "Implements drag n' drop for organization and a Github inspired contribution calendar for motivation/navigation",
+    ],
+    link: 'https://dailyjournal.me/',
+  },
+]

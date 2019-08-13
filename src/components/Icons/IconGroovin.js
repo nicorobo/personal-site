@@ -3,11 +3,11 @@ export default function IconGroovin(props) {
   return (
     <svg viewBox="0 0 396 396" xmlns="http://www.w3.org/2000/svg">
       <title>Groovin</title>
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g
           transform="translate(4.000000, 4.000000)"
           stroke="#FFFFFF"
-          stroke-width="7"
+          strokeWidth="7"
         >
           <path
             d="M253.398748,134.604809 L331.246555,56.8891568 C296.331307,21.9395658 248.150784,0.244633388 194.902683,0.00205577394 L194.902683,110.00475 C217.741377,110.245213 238.395022,119.600189 253.398748,134.604809 L253.398748,134.604809 Z"
@@ -52,7 +52,7 @@ export default function IconGroovin(props) {
           <g
             id="Group"
             transform="translate(56.000000, 0.000000)"
-            fill-opacity="0.424564085"
+            fillOpacity="0.424564085"
             fill="#FFFFFF"
           >
             <path
@@ -72,12 +72,12 @@ export default function IconGroovin(props) {
             <path
               d="M6.12425265,44.2101044 L54.6012516,92.6048092 C69.6049785,77.6001893 90.2586232,68.2452133 113.097317,68.0047501 L113.097317,68.0047501 L113.097317,0.000483070276 C71.3776309,0.108352483 33.5960116,16.9688117 6.12425265,44.2101044 Z"
               id="Combined-Shape"
-              fill-opacity="0.519559556"
+              fillOpacity="0.519559556"
             />
             <path
               d="M0.00431917223,151.001572 L30.0058117,151.001572 C30.2713522,128.202708 39.6196797,107.587273 54.6012516,92.6048092 L54.6012516,92.6048092 L33.5787461,71.6179914 C13.0664352,91.8866528 0.273069552,119.949736 0.00431917223,151.001572 Z"
               id="Combined-Shape"
-              fill-opacity="0.651466259"
+              fillOpacity="0.651466259"
             />
           </g>
         </g>

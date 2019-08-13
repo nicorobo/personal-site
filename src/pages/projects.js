@@ -100,7 +100,7 @@ const projects = [
     title: 'Place List',
     description:
       'A molecular mass/mass percentage calculator in the form of a periodic table. It allows you to add and subtract elements by clicking on them, or by entering the formula.',
-    projectLink: '',
+    projectLink: 'https://placelist.casa',
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/placelist',
     icon: <IconPlace />,
