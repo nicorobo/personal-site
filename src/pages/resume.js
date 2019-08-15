@@ -227,7 +227,7 @@ const experience = [
   {
     title: 'StreamMe',
     secondary: 'Austin, TX',
-    subtitle: 'Front End Engineer',
+    subtitle: 'Front-end Engineer',
     date: 'April 2017 - August 2018',
     details: [
       'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform',

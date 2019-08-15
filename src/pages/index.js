@@ -6,18 +6,29 @@ import Img from 'gatsby-image'
 import { primaryBrand } from '../colors'
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Page>
       <Bio>
         <Title>Nick Roberts</Title>
         <Blurb>Front-end Engineer in Austin, TX</Blurb>
         <Info>
-          I specialize in building interactive websites and applications!
+          I specialize in building interactive websites and apps. When I'm not
+          working on web projects, you'll find me climbing outside or playing
+          with my synths!
         </Info>
-        <Photo>
-          <Img fixed={data.file.childImageSharp.fixed} alt="" />
-        </Photo>
+        <Line />
+        <PhotoContainer>
+          <SmallPhoto>
+            <Img fixed={data.image2.childImageSharp.fixed} alt="" />
+          </SmallPhoto>
+          <Photo>
+            <Img fixed={data.image1.childImageSharp.fixed} alt="" />
+          </Photo>
+          <SmallPhoto>
+            <Img fixed={data.image3.childImageSharp.fixed} alt="" />
+          </SmallPhoto>
+        </PhotoContainer>
+
         <Links>
           <a target="_blank" href="https://github.com/nickroberts404">
             <i className="fab fa-github" />
@@ -38,11 +49,23 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    file(name: { eq: "image1" }) {
+    image1: file(name: { eq: "image1" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 160, height: 160) {
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    image2: file(name: { eq: "image2" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    image3: file(name: { eq: "image3" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -55,6 +78,12 @@ const Bio = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+`
+const Line = styled.div`
+  height: 2px;
+  width: 30%;
+  margin-top: 1.5rem;
+  background: #eee;
 `
 const Title = styled.div`
   font-size: 2.5rem;
@@ -69,13 +98,25 @@ const Blurb = styled.div`
 const Info = styled.div``
 
 const Photo = styled.div`
-  height: 160px;
-  width: 160px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   background: ${primaryBrand};
   overflow: hidden;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
-  margin: 1.5rem 0;
+  margin: 1.5rem 1.5rem;
+`
+const PhotoContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+const SmallPhoto = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: ${primaryBrand};
+  overflow: hidden;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
 `
 const Links = styled.div`
   font-size: 2rem;

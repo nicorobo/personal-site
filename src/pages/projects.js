@@ -70,13 +70,13 @@ const projects = [
     icon: <IconGroovin />,
   },
   {
-    title: 'Daily Journal',
+    title: 'PlaceList',
     description:
-      "Daily Journal was built to help me keep small summaries of my day's activities to look back and reflect on, with a Github inspired contribution calendar for motivation/navigation. It implements react-beautiful-dnd so the items can be quickly reorganized, and LocalStorage to persist data. ",
-    projectLink: 'https://dailyjournal.me/',
+      'An app for creating and sharing "playlists" of places, created to practice user authentication and GraphQL! It uses Google\'s Places API for location data and autosuggest, Passport\'s Facebook strategy for login, Apollo packages for working with the GraphQL server, and MongoDB Atlas for data persistence.',
+    projectLink: 'https://placelist.casa',
     pageLink: null,
-    gitLink: 'https://github.com/nickroberts404/daily-journal',
-    icon: <IconDaily />,
+    gitLink: 'https://github.com/nickroberts404/placelist',
+    icon: <IconPlace />,
   },
   {
     title: '@react-midi',
@@ -88,6 +88,15 @@ const projects = [
     icon: <IconMidi />,
   },
   {
+    title: 'Daily Journal',
+    description:
+      "Daily Journal was built to help me keep small summaries of my day's activities to look back and reflect on, with a Github inspired contribution calendar for motivation/navigation. It implements react-beautiful-dnd so the items can be quickly reorganized, and LocalStorage to persist data. ",
+    projectLink: 'https://dailyjournal.me/',
+    pageLink: null,
+    gitLink: 'https://github.com/nickroberts404/daily-journal',
+    icon: <IconDaily />,
+  },
+  {
     title: 'Lunaphase',
     description:
       'Lunaphase is a quick project inspired by a lunar calendar I have hanging on my wall. It uses D3 to render a grid of moons, all in the appropriate phase and roatation respective to your location. Clicking on a moon shows its rise and set time, also adjusted for your location.',
@@ -95,15 +104,6 @@ const projects = [
     pageLink: null,
     gitLink: 'https://github.com/nickroberts404/Lunaphase',
     icon: <IconLuna />,
-  },
-  {
-    title: 'Place List',
-    description:
-      'A molecular mass/mass percentage calculator in the form of a periodic table. It allows you to add and subtract elements by clicking on them, or by entering the formula.',
-    projectLink: 'https://placelist.casa',
-    pageLink: null,
-    gitLink: 'https://github.com/nickroberts404/placelist',
-    icon: <IconPlace />,
   },
   {
     title: 'Element Calculator',
