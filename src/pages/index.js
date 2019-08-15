@@ -6,7 +6,6 @@ import Img from 'gatsby-image'
 import { primaryBrand } from '../colors'
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Page>
       <Bio>
@@ -41,6 +40,19 @@ export default ({ data }) => {
             <Img fixed={data.image3.childImageSharp.fixed} alt="" />
           </SmallPhoto>
         </PhotoContainer>
+        <PhotoContainerSmall>
+          <Photo>
+            <Img fixed={data.image1.childImageSharp.fixed} alt="" />
+          </Photo>
+          <div>
+            <SmallPhoto>
+              <Img fixed={data.image2.childImageSharp.fixed} alt="" />
+            </SmallPhoto>
+            <SmallPhoto>
+              <Img fixed={data.image3.childImageSharp.fixed} alt="" />
+            </SmallPhoto>
+          </div>
+        </PhotoContainerSmall>
 
         <Links>
           <a target="_blank" href="https://github.com/nickroberts404">
@@ -118,6 +130,9 @@ const Blurb = styled.div`
   font-weight: bold;
   color: ${primaryBrand};
   margin-bottom: 1rem;
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+  }
 `
 const Info = styled.div`
   display: flex;
@@ -126,6 +141,9 @@ const Info = styled.div`
   width: 500px;
   line-height: 1.2rem;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 300px;
+  }
 `
 const MainInfo = styled.p``
 const ContactInfo = styled.p`
@@ -145,12 +163,30 @@ const Photo = styled.div`
   background: ${primaryBrand};
   overflow: hidden;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
-  margin: 1.5rem 1.5rem;
+  margin: 1.5rem;
+  @media (max-width: 500px) {
+    margin: 0.8rem;
+  }
 `
 const PhotoContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`
+const PhotoContainerSmall = styled.div`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  @media (max-width: 500px) {
+    display: flex;
+  }
+  div {
+    display: flex;
+  }
 `
 const SmallPhoto = styled.div`
   height: 100px;
@@ -159,6 +195,11 @@ const SmallPhoto = styled.div`
   background: ${primaryBrand};
   overflow: hidden;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  @media (max-width: 500px) {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
 `
 const Links = styled.div`
   font-size: 2rem;

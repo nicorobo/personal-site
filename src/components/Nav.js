@@ -6,7 +6,12 @@ import { primaryBrand, primaryText } from '../colors'
 export default () => (
   <Nav>
     <BrandLink to="/">
-      meadow<span>lab</span>
+      <div className="logo-long">
+        meadow<span>lab</span>
+      </div>
+      <div className="logo-short">
+        m<span>lab</span>
+      </div>
     </BrandLink>
     <Space />
     <Links>
@@ -39,6 +44,17 @@ const BrandLink = styled(Link)`
     font-weight: bold;
     color: ${primaryBrand};
   }
+  .logo-short {
+    display: none;
+  }
+  @media (max-width: 400px) {
+    .logo-long {
+      display: none;
+    }
+    .logo-short {
+      display: block;
+    }
+  }
 `
 const Space = styled.div`
   flex-grow: 1;
@@ -59,5 +75,8 @@ const NavLink = styled(Link)`
   }
   &.active {
     font-weight: bold;
+  }
+  @media (max-width: 400px) {
+    margin-right: 0.5rem;
   }
 `

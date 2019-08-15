@@ -4,7 +4,9 @@ import { darken } from 'polished'
 
 export default ({ title, description, projectLink, gitLink, icon, color }) => (
   <ProjectCard>
-    <Icon color={color}>{icon}</Icon>
+    <a target="_blank" href={projectLink}>
+      <Icon color={color}>{icon}</Icon>
+    </a>
     <CardBody>
       <Title color={color} href={projectLink} target="_blank">
         {title}
@@ -66,6 +68,7 @@ const Description = styled.p`
 const GithubLink = styled.a`
   align-self: flex-end;
   text-decoration: none;
+  margin-top: 0.5rem;
   color: ${props => props.color};
   &:hover {
     color: ${props => darken(0.1, props.color)};
