@@ -6,15 +6,28 @@ import Img from 'gatsby-image'
 import { primaryBrand } from '../colors'
 
 export default ({ data }) => {
+  console.log(data)
   return (
     <Page>
       <Bio>
         <Title>Nick Roberts</Title>
         <Blurb>Front-end Engineer in Austin, TX</Blurb>
         <Info>
-          I specialize in building interactive websites and apps. When I'm not
-          working on web projects, you'll find me climbing outside or playing
-          with my synths!
+          <MainInfo>
+            Hi! I'm a front-end engineer based in Austin that specializes in
+            building interactive websites and apps. When I'm not working on
+            projects, you'll find me climbing outside, making way-too-big
+            campfires, or playing with my synths!
+          </MainInfo>
+          <Emojis fluid={data.emoji.childImageSharp.fluid} />
+          <ContactInfo>
+            Check out my{' '}
+            <a target="_blank" href="https://github.com/nickroberts404">
+              Github
+            </a>{' '}
+            to see what I'm working on or send an{' '}
+            <a href="mailto:nickroberts404@gmail.com">email</a> to get in touch!
+          </ContactInfo>
         </Info>
         <Line />
         <PhotoContainer>
@@ -39,7 +52,7 @@ export default ({ data }) => {
           <a target="_blank" href="https://soundcloud.com/bamborine">
             <i className="fab fa-soundcloud" />
           </a>
-          <a target="_blank" href="mailto:nickroberts404@gmail.com">
+          <a href="mailto:nickroberts404@gmail.com">
             <i className="fas fa-envelope" />
           </a>
         </Links>
@@ -49,9 +62,9 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    image1: file(name: { eq: "image1" }) {
+    image1: file(name: { eq: "image3" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
+        fixed(width: 200, height: 200, cropFocus: NORTH) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -63,21 +76,32 @@ export const query = graphql`
         }
       }
     }
-    image3: file(name: { eq: "image3" }) {
+    image3: file(name: { eq: "jtree" }) {
       childImageSharp {
         fixed(width: 100, height: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFixed
         }
       }
     }
+    emoji: file(name: { eq: "emojis" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
+`
+const Emojis = styled(Img)`
+  width: 90px;
+  margin: 0.5rem 0;
 `
 const Bio = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `
 const Line = styled.div`
   height: 2px;
@@ -95,7 +119,24 @@ const Blurb = styled.div`
   color: ${primaryBrand};
   margin-bottom: 1rem;
 `
-const Info = styled.div``
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  line-height: 1.2rem;
+  text-align: center;
+`
+const MainInfo = styled.p``
+const ContactInfo = styled.p`
+  font-size: 0.85rem;
+  font-style: italic;
+  a {
+    font-weight: 600;
+    color: ${primaryBrand};
+    text-decoration: none;
+  }
+`
 
 const Photo = styled.div`
   height: 200px;
@@ -109,6 +150,7 @@ const Photo = styled.div`
 const PhotoContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 `
 const SmallPhoto = styled.div`
   height: 100px;
