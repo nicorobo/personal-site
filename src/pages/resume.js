@@ -95,6 +95,9 @@ const ButtonContainer = styled.div`
   max-width: 800px;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
 `
 
 const PDFButton = styled.button`
@@ -123,6 +126,9 @@ const Resume = styled.div`
     display: flex;
     margin-bottom: 1rem;
     justify-content: space-between;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
   .header a {
     text-decoration: none;
@@ -151,6 +157,10 @@ const Resume = styled.div`
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    @media (max-width: 500px) {
+      align-items: unset;
+      justify-content: unset;
+    }
   }
   .section {
     margin-bottom: 1rem;
@@ -167,6 +177,10 @@ const Resume = styled.div`
   .item-header {
     display: flex;
     align-items: flex-end;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   .item-title {
     font-weight: 600;
